@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l83-ep-ccW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.32002750498406818" green="0.37774494187897023" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.48528744460000001" green="1" blue="0.79285255700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="缓存"/>
+                                <connections>
+                                    <action selector="test:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ct-Bg-wo3"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HZm-4S-hvV">
+                                <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8li-qN-3jQ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MT1-92-Wxu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-mW-ldd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.7075415733" blue="0.17916921329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="清空缓存"/>
+                                <connections>
+                                    <action selector="read:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLq-c4-fsr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uUn-mW-ldd" firstAttribute="top" secondItem="l83-ep-ccW" secondAttribute="bottom" constant="36" id="48z-c4-cca"/>
+                            <constraint firstItem="HZm-4S-hvV" firstAttribute="top" secondItem="8li-qN-3jQ" secondAttribute="bottom" constant="71" id="Aff-Xg-psX"/>
+                            <constraint firstItem="l83-ep-ccW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C4G-nk-Fcp"/>
+                            <constraint firstItem="l83-ep-ccW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="Els-L4-CjX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l83-ep-ccW" secondAttribute="trailing" constant="65" id="KZ1-e4-pTf"/>
+                            <constraint firstItem="l83-ep-ccW" firstAttribute="top" secondItem="MT1-92-Wxu" secondAttribute="bottom" constant="21" id="L7A-LG-EHX"/>
+                            <constraint firstItem="uUn-mW-ldd" firstAttribute="trailing" secondItem="l83-ep-ccW" secondAttribute="trailing" id="LNA-iX-iSl"/>
+                            <constraint firstItem="MT1-92-Wxu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Mze-MN-56Z"/>
+                            <constraint firstItem="MT1-92-Wxu" firstAttribute="centerX" secondItem="HZm-4S-hvV" secondAttribute="centerX" id="Pay-6W-PQC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HZm-4S-hvV" secondAttribute="trailing" constant="85" id="T1b-y0-wIh"/>
+                            <constraint firstItem="l83-ep-ccW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="405" id="ZgG-vt-VuO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l83-ep-ccW" secondAttribute="bottom" constant="145" id="ddE-Kw-Yzw"/>
+                            <constraint firstItem="uUn-mW-ldd" firstAttribute="leading" secondItem="l83-ep-ccW" secondAttribute="leading" id="f10-2j-MQ8"/>
+                            <constraint firstItem="MT1-92-Wxu" firstAttribute="top" secondItem="HZm-4S-hvV" secondAttribute="bottom" constant="36" id="iJ1-2Y-hDj"/>
+                            <constraint firstItem="8li-qN-3jQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mQ2-QL-rUL"/>
+                            <constraint firstItem="HZm-4S-hvV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="v1g-6W-yed"/>
+                            <constraint firstItem="l83-ep-ccW" firstAttribute="top" secondItem="HZm-4S-hvV" secondAttribute="bottom" constant="185" id="yQj-DG-SF2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="l83-ep-ccW"/>
+                                <exclude reference="HZm-4S-hvV"/>
+                                <exclude reference="8li-qN-3jQ"/>
+                                <exclude reference="MT1-92-Wxu"/>
+                                <exclude reference="uUn-mW-ldd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Aff-Xg-psX"/>
+                                <exclude reference="T1b-y0-wIh"/>
+                                <exclude reference="v1g-6W-yed"/>
+                                <exclude reference="ddE-Kw-Yzw"/>
+                                <exclude reference="C4G-nk-Fcp"/>
+                                <exclude reference="Els-L4-CjX"/>
+                                <exclude reference="KZ1-e4-pTf"/>
+                                <exclude reference="L7A-LG-EHX"/>
+                                <exclude reference="ZgG-vt-VuO"/>
+                                <exclude reference="yQj-DG-SF2"/>
+                                <exclude reference="48z-c4-cca"/>
+                                <exclude reference="LNA-iX-iSl"/>
+                                <exclude reference="f10-2j-MQ8"/>
+                                <exclude reference="mQ2-QL-rUL"/>
+                                <exclude reference="Mze-MN-56Z"/>
+                                <exclude reference="Pay-6W-PQC"/>
+                                <exclude reference="iJ1-2Y-hDj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="l83-ep-ccW"/>
+                                <include reference="HZm-4S-hvV"/>
+                                <include reference="8li-qN-3jQ"/>
+                                <include reference="MT1-92-Wxu"/>
+                                <include reference="uUn-mW-ldd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Aff-Xg-psX"/>
+                                <include reference="T1b-y0-wIh"/>
+                                <include reference="v1g-6W-yed"/>
+                                <include reference="ddE-Kw-Yzw"/>
+                                <exclude reference="C4G-nk-Fcp"/>
+                                <include reference="Els-L4-CjX"/>
+                                <include reference="KZ1-e4-pTf"/>
+                                <include reference="L7A-LG-EHX"/>
+                                <exclude reference="ZgG-vt-VuO"/>
+                                <include reference="yQj-DG-SF2"/>
+                                <include reference="48z-c4-cca"/>
+                                <include reference="LNA-iX-iSl"/>
+                                <include reference="f10-2j-MQ8"/>
+                                <include reference="mQ2-QL-rUL"/>
+                                <include reference="Mze-MN-56Z"/>
+                                <include reference="Pay-6W-PQC"/>
+                                <include reference="iJ1-2Y-hDj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="MT1-92-Wxu" id="Kxl-ok-7ID"/>
+                        <outlet property="progressView" destination="HZm-4S-hvV" id="B9A-ZW-0uK"/>
+                        <outlet property="status" destination="8li-qN-3jQ" id="PoH-N2-MxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="255"/>
+        </scene>
+    </scenes>
+</document>
